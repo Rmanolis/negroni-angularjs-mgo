@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="static/vendors/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="static/vendors/macgyver/macgyver.css"/>
+
+    <script src="static/vendors/jquery-1.11.0.min.js"></script>
+    <script src="static/vendors/jquery-ui.min.js"></script>
+    <script src="static/vendors/underscore.string.min.js"></script>
+
+    <script src="static/vendors/angularjs/angular.min.js"></script>
+    <script src="static/vendors/angularjs/angular-route.min.js"></script>
+    <script src="static/vendors/angularjs/ng-grid-2.0.7.min.js"></script>
+    <script src="static/vendors/angular-file-upload/angular-file-upload.min.js"></script>
+    <script src="static/vendors/angular-file-upload/angular-file-upload-shim.min.js"></script>
+    <script src="static/vendors/socket.min.js"></script>
+
+    <script src="static/vendors/lodash.js"></script>
+    <script src="static/vendors/moment-with-langs.js"></script>
+    <script src="static/vendors/ui-bootstrap-tpls-0.10.0.min.js"></script>
+
+    <script src="static/vendors/macgyver/macgyver.min.js"></script>
+
+</head>
+<body ng-app="App">
+<div id="main">
+
+    <div ng-controller="NavMenuCtrl">
+        <ul class="nav navbar-nav">
+            <li ng-repeat="link in sitemap">
+                <a href="{{link.url}}">{{link.title}}</a>
+            </li>
+        </ul>
+
+        <br/>
+    </div>
+    <div>
+        <div ng-view></div>
+    </div>
+</div>
+
+<script src="static/app/main.js"></script>
+
+<!-- Services -->
+<script src="static/app/services/UserSrv.js"></script>
+<script src="static/app/services/AuthSrv.js"></script>
+
+
+<!-- Controllers -->
+<script src="static/app/controllers/HomeCtrl.js"></script>
+<script src="static/app/controllers/NavMenuCtrl.js"></script>
+<script src="static/app/controllers/LoginCtrl.js"></script>
+<script src="static/app/controllers/RegisterCtrl.js"></script>
+<script src="static/app/controllers/ProfileCtrl.js"></script>
+
+
+
+</body>
+</html>
